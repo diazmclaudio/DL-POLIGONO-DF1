@@ -81,13 +81,18 @@ calcularTriangulo.addEventListener("click", function (e) {
      var valBase = document.getElementById("valBase").value;
      var resultado = document.getElementById("resultado");
 
-     var createTriangulo = new Triangulo(parseInt(valLado), parseInt(valBase), parseInt(valAltura));
+     var createTriangulo = new Triangulo(
+          parseInt(valLado),
+          parseInt(valBase),
+          parseInt(valAltura)
+     );
 
-     resultado.innerHTML = `Perímetro: ${createTriangulo.calcualarPerimetro()} <br>Área: ${createTriangulo.calcularArea()}`
+     resultado.innerHTML = `Perímetro: ${createTriangulo.calcualarPerimetro()} <br>Área: ${createTriangulo.calcularArea()}`;
 });
 
-// RECTANGULO 
-function Rectangulo (ladoA, ladoB){
+//<!------------------------------- RECTANGULO --------------------------->
+// RECTANGULO
+function Rectangulo(ladoA, ladoB) {
      this._ladoA = function () {
           return ladoA;
      };
@@ -96,47 +101,47 @@ function Rectangulo (ladoA, ladoB){
      };
 }
 
-// GETTERS 
+// GETTERS
 
-Rectangulo.prototype.getLadoA = function(){
+Rectangulo.prototype.getLadoA = function () {
      return this._ladoA();
-}
+};
 
-Rectangulo.prototype.getLadoB = function(){
+Rectangulo.prototype.getLadoB = function () {
      return this._ladoB();
-}
+};
 
 // SETTERS
 
-Rectangulo.prototype.setLadoA = function(nuevo_ladoA){
-     this._ladoA = function(){
+Rectangulo.prototype.setLadoA = function (nuevo_ladoA) {
+     this._ladoA = function () {
           return nuevo_ladoA;
-     }
-}
+     };
+};
 
-Rectangulo.prototype.setLadoB = function(nuevo_ladoB){
-     this._ladoB = function(){
+Rectangulo.prototype.setLadoB = function (nuevo_ladoB) {
+     this._ladoB = function () {
           return nuevo_ladoB;
-     }
-}
+     };
+};
 
 // Perimetro
 
-Rectangulo.prototype.calcualarPerimetro = function(){
-     return (2 * this.getLadoA()) + (2 * this.getLadoB());
-}
+Rectangulo.prototype.calcualarPerimetro = function () {
+     return 2 * this.getLadoA() + 2 * this.getLadoB();
+};
 
 // Area
 
-Rectangulo.prototype.calcularArea = function () { 
+Rectangulo.prototype.calcularArea = function () {
      return this.getLadoA() * this.getLadoB();
- }
+};
 
- //
+//
 
- var calcularRectangulo = document.getElementById("calcularRectangulo");
+var calcularRectangulo = document.getElementById("calcularRectangulo");
 
- calcularRectangulo.addEventListener('click',function (e) { 
+calcularRectangulo.addEventListener("click", function (e) {
      e.preventDefault();
 
      var valA = document.getElementById("valA").value;
@@ -146,6 +151,4 @@ Rectangulo.prototype.calcularArea = function () {
      var createRectangulo = new Rectangulo(parseInt(valA), parseInt(valB));
 
      resultadoR.innerHTML = `Perímetro: ${createRectangulo.calcualarPerimetro()}<br>Área: ${createRectangulo.calcularArea()}`;
-
-
-  })
+});
