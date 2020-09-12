@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Poligonos ES5</title>
+     </head>
+     <body>
+          <h4>Poligonos ES5</h4>
+          <p>
+               <input
+                    type="radio"
+                    id="triangulo"
+                    name="poligono"
+                    value="triangulo"
+                    onclick="showTriangulo()"
+               />
+               <label for="triangulo">Triángulo</label><br />
+               <input
+                    type="radio"
+                    id="rectangulo"
+                    name="poligono"
+                    value="rectangulo"
+                    onclick="showRectangulo()"
+               />
+               <label for="rectangulo">Rectangulo</label><br />
+          </p>
+
+          <div id="boxTriangulo" style="display: none">
+          
+               <p>  
+                    <h3>Cálculo Perímetro y Área</h3>
+
+                    <label for="valLado">Ingresa valor del Lado:</label>
+                    <input type="number" id="valLado" ><br>
+
+                    <label for="valAltura">Ingresa valor de la Altura:</label>
+                    <input type="number" id="valAltura" ><br>
+
+                    <label for="valBase">Ingresa valor de la Base:</label>
+                    <input type="number" id="valBase" ><br>
+
+                    <button id="calcularTriangulo">Calcular</button> <br>
+                    <span id="resultado"></span>
+               </p>
+          
+          </div>
+
+          <div id="boxRectangulo" style="display: none">
+          
+               <p>  
+                    <h3>Cálculo Perímetro y Área</h3>
+                    <img src="img/rectángulo.jpg" alt="" style="height:200px;"><br><br>
+
+                    <label for="valA">Ingresa valor lado A:</label>
+                    <input type="number" id="valA" ><br>
+
+                    <label for="valB">Ingresa valor lado B:</label>
+                    <input type="number" id="valB" ><br>
+
+                    <button id="calcularRectangulo">Calcular</button> <br>
+                    <span id="resultadoR"></span>
+               </p>
+          
+          </div>
+
+          <script src="js/es5.js"></script>
+     </body>
+</html>
